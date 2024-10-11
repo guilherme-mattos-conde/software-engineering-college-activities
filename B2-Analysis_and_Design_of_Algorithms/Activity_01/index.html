@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <title>Atividade 1 - Guilherme Mattos Conde</title>
+</head>
+<body>
+    <main>
+        <form id="formulario">
+            <fieldset><legend>Formulário</legend>
+                <div>
+                    <input type="text" id="produto" placeholder="Produto" required>
+                    <label for="produto">Produto</label>
+                </div>
+
+                <div>
+                    <input type="number" id="quantidade" placeholder="Quantidade" required>
+                    <label for="quantidade">Quantidade</label>
+                </div>
+
+                <div>
+                    <input type="number" id="valor" placeholder="Valor Unidade (R$)" step="0.01" required>
+                    <label for="valor">Valor Unidade (R$)</label>
+                </div>
+
+                <div>
+                    <input type="number" id="desconto" placeholder="Desconto (R$)" step="0.01" required>
+                    <label for="desconto">Desconto (R$)</label>
+                </div>
+
+                <input type="submit" value="Adicionar" id="enviar">
+            </fieldset>
+        </form>
+
+        <table id="tabela">
+            <tr>
+                <th>ID</th>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Valor Unidade</th>
+                <th>Desconto</th>
+                <th>Subtotal</th>
+            </tr>
+        </table>
+    </main>
+<script src="main.js"></script>
+</body>
+</html>
