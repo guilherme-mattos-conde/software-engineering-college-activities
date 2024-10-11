@@ -1,4 +1,4 @@
-public class Produto {
+abstract class Produto {
     private String nome;
     private double preco;
 
