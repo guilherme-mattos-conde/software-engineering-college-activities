@@ -1,6 +1,6 @@
-<h1>Software-Engeneering-Colege-Activities | Welcome to my repository ✌</h1>
+<h1>Software-Engeneering-College-Activities | Welcome to my repository ✌</h1>
 
-<p align="justify">In this repository I post the activities I do at colege. It's divided by the bimester and the subject.</p>
+<p align="justify">In this repository I post the activities I do at college. It's divided by the bimester and the subject.</p>
 
 <br/>
 <div align="left">
