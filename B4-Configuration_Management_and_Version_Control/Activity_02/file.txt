@@ -1,3 +1,4 @@
 Início do arquivo
 Alteração 1 [main]
 Alteração 2 [main]
+Alteração 3 [main]
