@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/grade-livros.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Digital Library</title>
+</head>
+<body>
+    <header id="cabecalho">
+        <div id="menu">
+            <a href="index.html" id="titulo-menu">Digital Library</a>
+            <nav id="lista-menu">
+                <input id="pesquisa" type="text" placeholder="Pesquisar...">
+                <button id="btn-pesquisa">Pesquisar</button>
+            </nav>
+        </div>
+        <div id="banner">
+            <h1>"A leitura engrandece a alma"</h1>
+        </div>
+    </header>
+    
+    <main>
+        <section id="livros">
+        </section>
+    </main>
+
+    <footer id="rodape">
+        <span id="copyright">&copy; <script>document.write(new Date().getFullYear())</script> by Guilherme Mattos Conde</span>
+        <span><a href="mailto:guilherme.mattos.conde@gmail.com" target="blank">Gmail</a> | <a href="https://github.com/guilherme-mattos-conde" target="blank">GitHub</a> | <a href="https://www.linkedin.com/in/guilherme-mattos-conde/" target="blank">Linkedin</a></span>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="module" src="js/carrosselLivros.js"></script>
+</body>
+</html>

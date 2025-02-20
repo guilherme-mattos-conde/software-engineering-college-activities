@@ -1,0 +1,70 @@
+/* MENU */
+#menu {
+    background-color: var(--cor3);
+}
+#pesquisa:focus {
+    border: 2px solid var(--cor1);
+}
+#btn-pesquisa {
+    background-color: var(--cor3);
+    color: var(--cor1);
+    border: 2px solid var(--cor1);
+}
+#btn-pesquisa:hover {
+    background-color: var(--cor1);
+    color: var(--cor3);
+}
+
+/* DETALHES LIVRO */
+#detalhes-livro {
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    max-width: 1100px;
+}
+#container {
+    display: flex;
+    align-items: start;
+    margin-bottom: 50px;
+}
+#titulo{
+    margin: 0;
+    font-size: 18pt;
+}
+#subtitulo {
+    margin: 0;
+    font-size: 14pt;
+    font-weight: 100;
+    color: var(--cor2);
+}
+#informacoes {
+    margin: 10px 0 20px 0;
+}
+#informacoes p {
+    margin: 8px 0;
+    font-size: 11pt;
+}
+#botao {
+    margin: 20px 0;
+}
+#botao a {
+    padding: 8px 10px;
+    background-color: rgb(0, 119, 255);
+    color: white;
+    border-radius: 8px;
+}
+#capa {
+    min-width: 150px;
+    width: 150px;
+    height: auto;
+    margin: 0 70px;
+}
+
+#descricao {
+    text-align: justify;
+    padding: 20px 30px;
+    border: 2px solid var(--cor3);
+    color: var(--cor2);
+    line-height: 25px;
+    border-radius: 20px;
+}

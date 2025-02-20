@@ -1,0 +1,55 @@
+/* MENU */
+#menu {
+    background-color: var(--cor3);
+}
+#pesquisa:focus {
+    border: 2px solid var(--cor1);
+}
+#btn-pesquisa {
+    background-color: var(--cor3);
+    color: var(--cor1);
+    border: 2px solid var(--cor1);
+}
+#btn-pesquisa:hover {
+    background-color: var(--cor1);
+    color: var(--cor3);
+}
+
+/* RESULTADOS LIVROS */
+#grade-resultados {
+    list-style: none;
+}
+.livros {
+    display: flex;
+    width: 80vw;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--cor5);
+}
+.livros:last-child {
+    border-bottom: none;
+}
+.titulo {
+    margin: 0;
+    font-size: 15pt;
+    color: var(--cor3)
+}
+.titulo:hover {
+    text-decoration: underline;
+}
+.informacoes {
+    margin-top: 20px;
+}
+.informacoes p {
+    margin: 10px 0;
+    font-size: 11pt;
+}
+.capa {
+    min-width: 120px;
+    width: 120px;
+    height: auto;
+}
+
+.livros>a {
+    margin-right: 30px;
+}
