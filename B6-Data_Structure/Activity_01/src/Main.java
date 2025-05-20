@@ -12,5 +12,8 @@ public class Main {
 
         System.out.print("Árvore pré-ordem: ");
         arvore.preOrdem(arvore.getRaiz());
+
+        System.out.print("\nÁrvore em-ordem: ");
+        arvore.emOrdem(arvore.getRaiz());
     }
 }

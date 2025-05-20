@@ -24,6 +24,14 @@ public class Arvore {
         }
     }
 
+    public void emOrdem(No no) {
+        if (no != null) {
+            emOrdem(no.getNoEsquerda());
+            System.out.print(no.getValor() + " ");
+            emOrdem(no.getNoDireita());
+        }
+    }
+
     public No getRaiz() {
         return raiz;
     }
