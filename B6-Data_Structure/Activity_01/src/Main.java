@@ -9,5 +9,8 @@ public class Main {
         arvore.getRaiz().getNoDireita().setNoDireita(new No("F"));
 
         System.out.println("Quantidade de nós da árvore: " + arvore.getQuantidadeNos(arvore.getRaiz()));
+
+        System.out.print("Árvore pré-ordem: ");
+        arvore.preOrdem(arvore.getRaiz());
     }
 }

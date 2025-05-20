@@ -16,6 +16,14 @@ public class Arvore {
         return tamanho;
     }
 
+    public void preOrdem(No no) {
+        if (no != null) {
+            System.out.print(no.getValor() + " ");
+            preOrdem(no.getNoEsquerda());
+            preOrdem(no.getNoDireita());
+        }
+    }
+
     public No getRaiz() {
         return raiz;
     }
