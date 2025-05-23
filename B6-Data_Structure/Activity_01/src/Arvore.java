@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Queue;
 
 public class Arvore {
@@ -40,6 +41,20 @@ public class Arvore {
             posOrdem(no.getNoEsquerda());
             posOrdem(no.getNoDireita());
             System.out.print(no.getValor() + " ");
+        }
+    }
+
+    public void emNivel() {
+        if(raiz == null) return;
+
+        Queue<No> fila = new LinkedList<>();
+        fila.add(raiz);
+
+        while(!fila.isEmpty()) {
+            No atual = fila.poll();
+            System.out.print(atual.getValor() + " ");
+            if(atual.getNoEsquerda() != null) fila.add(atual.getNoEsquerda());
+            if(atual.getNoDireita() != null) fila.add(atual.getNoDireita());
         }
     }
 

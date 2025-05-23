@@ -18,5 +18,8 @@ public class Main {
 
         System.out.print("\nÁrvore pós-ordem: ");
         arvore.posOrdem(arvore.getRaiz());
+
+        System.out.print("\nÁrvore em-nível: ");
+        arvore.emNivel();
     }
 }
