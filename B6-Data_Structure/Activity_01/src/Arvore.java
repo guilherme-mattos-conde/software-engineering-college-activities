@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Queue;
+
 public class Arvore {
     private No raiz = null;
     private int tamanho;
@@ -29,6 +32,14 @@ public class Arvore {
             emOrdem(no.getNoEsquerda());
             System.out.print(no.getValor() + " ");
             emOrdem(no.getNoDireita());
+        }
+    }
+
+    public void posOrdem(No no) {
+        if (no != null) {
+            posOrdem(no.getNoEsquerda());
+            posOrdem(no.getNoDireita());
+            System.out.print(no.getValor() + " ");
         }
     }
 

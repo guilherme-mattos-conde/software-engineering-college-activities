@@ -15,5 +15,8 @@ public class Main {
 
         System.out.print("\nÁrvore em-ordem: ");
         arvore.emOrdem(arvore.getRaiz());
+
+        System.out.print("\nÁrvore pós-ordem: ");
+        arvore.posOrdem(arvore.getRaiz());
     }
 }
