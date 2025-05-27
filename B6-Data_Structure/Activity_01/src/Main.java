@@ -21,5 +21,8 @@ public class Main {
 
         System.out.print("\nÁrvore em-nível: ");
         arvore.emNivel();
+
+        System.out.print("\nÁrvore pré-ordem não recursiva: ");
+        arvore.preOrdemNaoRecursiva();
     }
 }

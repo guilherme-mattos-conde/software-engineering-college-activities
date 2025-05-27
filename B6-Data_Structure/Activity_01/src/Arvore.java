@@ -1,6 +1,6 @@
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class Arvore {
     private No raiz = null;
@@ -25,6 +25,28 @@ public class Arvore {
             System.out.print(no.getValor() + " ");
             preOrdem(no.getNoEsquerda());
             preOrdem(no.getNoDireita());
+        }
+    }
+
+    public void preOrdemNaoRecursiva() {
+        if(raiz == null) return;
+
+        Queue<No> filaEsquerda = new LinkedList<>();
+        Stack<No> filaDireita = new Stack<>();
+        filaEsquerda.add(raiz);
+
+        while(!filaEsquerda.isEmpty() || !filaDireita.isEmpty()) {
+            No atual;
+
+            if (!filaEsquerda.isEmpty()) {
+                atual = filaEsquerda.poll();
+            } else {
+                atual = filaDireita.pop();
+            }
+
+            System.out.print(atual.getValor() + " ");
+            if(atual.getNoEsquerda() != null) filaEsquerda.add(atual.getNoEsquerda());
+            if(atual.getNoDireita() != null) filaDireita.add(atual.getNoDireita());
         }
     }
 
