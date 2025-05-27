@@ -10,22 +10,25 @@ public class Main {
 
         System.out.println("Quantidade de nós da árvore: " + arvore.getQuantidadeNos(arvore.getRaiz()));
 
-        System.out.print("Árvore pré-ordem: ");
+        System.out.print("Árvore pré-ordem (recursiva): ");
         arvore.preOrdem(arvore.getRaiz());
 
-        System.out.print("\nÁrvore em-ordem: ");
+        System.out.print("\nÁrvore pré-ordem (não recursiva): ");
+        arvore.preOrdemNaoRecursiva();
+
+        System.out.print("\nÁrvore em-ordem (recursiva): ");
         arvore.emOrdem(arvore.getRaiz());
 
-        System.out.print("\nÁrvore pós-ordem: ");
+        System.out.print("\nÁrvore em-ordem (não recursiva): ");
+        arvore.emOrdemNaoRecursiva();
+
+        System.out.print("\nÁrvore pós-ordem (recursiva): ");
         arvore.posOrdem(arvore.getRaiz());
+
+        System.out.print("\nÁrvore pós-ordem (não recursiva): ");
+        arvore.posOrdemNaoRecursiva();
 
         System.out.print("\nÁrvore em-nível: ");
         arvore.emNivel();
-
-        System.out.print("\nÁrvore pré-ordem não recursiva: ");
-        arvore.preOrdemNaoRecursiva();
-
-        System.out.print("\nÁrvore em-ordem não recursiva: ");
-        arvore.emOrdemNaoRecursiva();
     }
 }

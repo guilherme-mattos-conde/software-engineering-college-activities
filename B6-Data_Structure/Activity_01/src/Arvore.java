@@ -1,6 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
-
-import java.sql.SQLOutput;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -95,6 +92,27 @@ public class Arvore {
             posOrdem(no.getNoEsquerda());
             posOrdem(no.getNoDireita());
             System.out.print(no.getValor() + " ");
+        }
+    }
+
+    public void posOrdemNaoRecursiva() {
+        if(raiz == null) return;
+
+        Stack<No> pilha = new Stack<>();
+        Stack<No> espera = new Stack<>();
+        pilha.push(raiz);
+
+        while(!pilha.isEmpty()) {
+            No atual = pilha.pop();
+            espera.push(atual);
+
+            if(atual.getNoEsquerda() != null) pilha.push(atual.getNoEsquerda());
+            if(atual.getNoDireita() != null) pilha.push(atual.getNoDireita());
+        }
+
+        while(!espera.isEmpty()) {
+            No atual = espera.pop();
+            System.out.print(atual.getValor() + " ");
         }
     }
 
