@@ -31,22 +31,14 @@ public class Arvore {
     public void preOrdemNaoRecursiva() {
         if(raiz == null) return;
 
-        Queue<No> filaEsquerda = new LinkedList<>();
-        Stack<No> pilhaDireita = new Stack<>();
-        filaEsquerda.add(raiz);
+        Stack<No> pilha = new Stack<>();
+        pilha.push(raiz);
 
-        while(!filaEsquerda.isEmpty() || !pilhaDireita.isEmpty()) {
-            No atual;
-
-            if (!filaEsquerda.isEmpty()) {
-                atual = filaEsquerda.poll();
-            } else {
-                atual = pilhaDireita.pop();
-            }
-
+        while(!pilha.isEmpty()) {
+            No atual = pilha.pop();
             System.out.print(atual.getValor() + " ");
-            if(atual.getNoEsquerda() != null) filaEsquerda.add(atual.getNoEsquerda());
-            if(atual.getNoDireita() != null) pilhaDireita.add(atual.getNoDireita());
+            if(atual.getNoDireita() != null) pilha.add(atual.getNoDireita());
+            if(atual.getNoEsquerda() != null) pilha.add(atual.getNoEsquerda());
         }
     }
 
@@ -62,28 +54,17 @@ public class Arvore {
         if(raiz == null) return;
 
         Stack<No> pilha = new Stack<>();
-        Stack<No> espera = new Stack<>();
-        pilha.add(raiz);
+        No atual = raiz;
 
-        while(!pilha.isEmpty() || !espera.isEmpty()) {
-            No atual;
-
-            if (!pilha.isEmpty()) {
-                atual = pilha.pop();
-                if (atual.getNoEsquerda() != null) {
-                    pilha.add(atual.getNoEsquerda());
-                    espera.add(atual);
-                } else if (atual.getNoDireita() != null) {
-                    System.out.print(atual.getValor() + " ");
-                    pilha.add(atual.getNoDireita());
-                } else {
-                    System.out.print(atual.getValor() + " ");
-                }
-            } else {
-                atual = espera.pop();
-                System.out.print(atual.getValor() + " ");
-                if (atual.getNoDireita() != null) pilha.add(atual.getNoDireita());
+        while(atual != null || !pilha.isEmpty()) {
+            while(atual != null) {
+                pilha.push(atual);
+                atual = atual.getNoEsquerda();
             }
+
+            atual = pilha.pop();
+            System.out.print(atual.getValor() + " ");
+            atual = atual.getNoDireita();
         }
     }
 
