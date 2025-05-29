@@ -36,6 +36,26 @@ public class Arvore {
         }
     }
 
+    public int getQuantidadeFolhasNaoRecursiva() {
+        if(raiz == null) return 0;
+
+        Queue<No> fila = new LinkedList<>();
+        int i = 0;
+        fila.add(raiz);
+
+        while(!fila.isEmpty()) {
+            No atual = fila.poll();
+            if(atual.getNoEsquerda() == null && atual.getNoDireita() == null) {
+                i += 1;
+            } else {
+                if(atual.getNoEsquerda() != null) fila.add(atual.getNoEsquerda());
+                if(atual.getNoDireita() != null) fila.add(atual.getNoDireita());
+            }
+        }
+
+        return i;
+    }
+
     public void preOrdem(No no) {
         if (no != null) {
             System.out.print(no.getValor() + " ");
