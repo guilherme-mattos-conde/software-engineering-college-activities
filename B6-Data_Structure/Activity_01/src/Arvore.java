@@ -4,20 +4,27 @@ import java.util.Stack;
 
 public class Arvore {
     private No raiz = null;
-    private int tamanho;
-
-    public Arvore() {
-        this.tamanho = 0;
-    }
 
     public int getQuantidadeNos(No no) {
-        if (no != null) {
-            this.tamanho += 1;
-            getQuantidadeNos(no.getNoEsquerda());
-            getQuantidadeNos(no.getNoDireita());
+        if(no == null) return 0;
+        return 1 + getQuantidadeNos(no.getNoEsquerda()) + getQuantidadeNos(no.getNoDireita());
+    }
+
+    public int getQuantidadeNosNaoRecursiva() {
+        if(raiz == null) return 0;
+
+        Queue<No> fila = new LinkedList<>();
+        int i = 0;
+        fila.add(raiz);
+
+        while(!fila.isEmpty()) {
+            No atual = fila.poll();
+            i += 1;
+            if(atual.getNoEsquerda() != null) fila.add(atual.getNoEsquerda());
+            if(atual.getNoDireita() != null) fila.add(atual.getNoDireita());
         }
 
-        return tamanho;
+        return i;
     }
 
     public void preOrdem(No no) {

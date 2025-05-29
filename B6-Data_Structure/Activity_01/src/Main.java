@@ -8,7 +8,8 @@ public class Main {
         arvore.getRaiz().getNoEsquerda().setNoDireita(new No("E"));
         arvore.getRaiz().getNoDireita().setNoDireita(new No("F"));
 
-        System.out.println("Quantidade de nós da árvore: " + arvore.getQuantidadeNos(arvore.getRaiz()));
+        System.out.println("Quantidade de nós (recursiva): " + arvore.getQuantidadeNos(arvore.getRaiz()));
+        System.out.println("Quantidade de nós (não recursiva): " + arvore.getQuantidadeNosNaoRecursiva());
 
         System.out.print("Árvore pré-ordem (recursiva): ");
         arvore.preOrdem(arvore.getRaiz());
