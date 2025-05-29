@@ -11,6 +11,8 @@ public class Main {
         System.out.println("Quantidade de nós (recursiva): " + arvore.getQuantidadeNos(arvore.getRaiz()));
         System.out.println("Quantidade de nós (não recursiva): " + arvore.getQuantidadeNosNaoRecursiva());
 
+        System.out.println("Quantidade de folhas (recursiva): " + arvore.getQuantidadeFolhas(arvore.getRaiz()));
+
         System.out.print("Árvore pré-ordem (recursiva): ");
         arvore.preOrdem(arvore.getRaiz());
 

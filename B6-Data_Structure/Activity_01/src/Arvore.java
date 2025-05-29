@@ -6,7 +6,7 @@ public class Arvore {
     private No raiz = null;
 
     public int getQuantidadeNos(No no) {
-        if(no == null) return 0;
+        if (no == null) return 0;
         return 1 + getQuantidadeNos(no.getNoEsquerda()) + getQuantidadeNos(no.getNoDireita());
     }
 
@@ -25,6 +25,15 @@ public class Arvore {
         }
 
         return i;
+    }
+
+    public int getQuantidadeFolhas(No no) {
+        if (no == null) return 0;
+        if (no.getNoEsquerda() == null && no.getNoDireita() == null) {
+            return 1;
+        } else {
+            return getQuantidadeFolhas(no.getNoEsquerda()) + getQuantidadeFolhas(no.getNoDireita());
+        }
     }
 
     public void preOrdem(No no) {
