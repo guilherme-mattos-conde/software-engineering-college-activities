@@ -4,8 +4,6 @@
 
 ## 🚀 Tecnologias Usadas
 
-<br>
-
 - **FrontEnd:** HTML, CSS, JavaScript, Vue + TypeScript.
 - **BackEnd:** Java, Python, Node.
 - **Banco de Dados:** MySQL, Postgres, MongoDB.
