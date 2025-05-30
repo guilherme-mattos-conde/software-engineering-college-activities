@@ -10,7 +10,24 @@ public class Arvore {
         return 1 + getQuantidadeNos(no.getNoEsquerda()) + getQuantidadeNos(no.getNoDireita());
     }
 
-    public int getQuantidadeNosNaoRecursiva() {
+    public int getQuantidadeNosPilha() {
+        if(raiz == null) return 0;
+
+        Stack<No> pilha = new Stack<>();
+        int i = 0;
+        pilha.add(raiz);
+
+        while(!pilha.isEmpty()) {
+            No atual = pilha.pop();
+            i += 1;
+            if(atual.getNoEsquerda() != null) pilha.add(atual.getNoEsquerda());
+            if(atual.getNoDireita() != null) pilha.add(atual.getNoDireita());
+        }
+
+        return i;
+    }
+
+    public int getQuantidadeNosFila() {
         if(raiz == null) return 0;
 
         Queue<No> fila = new LinkedList<>();

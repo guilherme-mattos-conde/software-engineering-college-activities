@@ -9,7 +9,8 @@ public class Main {
         arvore.getRaiz().getNoDireita().setNoDireita(new No("F"));
 
         System.out.println("Quantidade de nós (recursiva): " + arvore.getQuantidadeNos(arvore.getRaiz()));
-        System.out.println("Quantidade de nós (não recursiva): " + arvore.getQuantidadeNosNaoRecursiva());
+        System.out.println("Quantidade de nós (não recursiva): " + arvore.getQuantidadeNosPilha());
+        System.out.println("Quantidade de nós (não recursiva): " + arvore.getQuantidadeNosFila());
 
         System.out.println("Quantidade de folhas (recursiva): " + arvore.getQuantidadeFolhas(arvore.getRaiz()));
         System.out.println("Quantidade de folhas (não recursiva): " + arvore.getQuantidadeFolhasNaoRecursiva());
