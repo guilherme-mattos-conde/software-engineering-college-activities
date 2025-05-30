@@ -1,4 +1,4 @@
-# Software-Engeneering-College-Activities | Welcome to my repository ✌
+# Welcome to my repository ✌
 
 <p align="justify">In this repository I post the activities I do at college. It's divided by the bimester and the subject.</p>
 
