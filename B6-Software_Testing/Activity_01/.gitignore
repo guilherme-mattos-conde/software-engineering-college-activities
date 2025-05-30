@@ -1,0 +1,44 @@
+# Ambiente virtual Python
+venv/
+pyvenv.cfg
+
+# Arquivos de log e relatórios de teste
+*.log
+*.html
+*.xml
+log.html
+output.xml
+report.html
+
+# Screenshots dos testes Selenium
+selenium-screen*.png
+
+# Arquivos gerados pelo Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Pastas do ambiente virtual (Windows)
+Lib/
+Scripts/
+include/
+
+# Arquivos de configuração/IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# Arquivos específicos do sistema
+.DS_Store
+Thumbs.db
+
+# Robot Framework (opcional)
+*.robot.bak
+*.pabot.results
