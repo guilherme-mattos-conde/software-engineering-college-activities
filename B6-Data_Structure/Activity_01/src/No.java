@@ -22,6 +22,12 @@ public class No {
         this.altura = 1 + Math.max(alturaEsquerda, alturaDireita);
     }
 
+    public int getFatorBalanceamento() {
+        int alturaEsquerda = (noEsquerda == null) ? 0 : noEsquerda.getAltura();
+        int alturaDireita = (noDireita == null) ? 0 : noDireita.getAltura();
+        return alturaEsquerda - alturaDireita;
+    }
+    
     public No getNoDireita() {
         return noDireita;
     }
