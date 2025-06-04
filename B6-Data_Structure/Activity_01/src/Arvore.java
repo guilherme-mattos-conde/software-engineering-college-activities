@@ -191,6 +191,19 @@ public class Arvore {
         return x;
     }
 
+    private No rotacaoRR(No x) {
+        No y = x.getNoDireita();
+        No T2 = y.getNoEsquerda();
+
+        y.setNoEsquerda(x);
+        x.setNoDireita(T2);
+
+        atualizarAltura(x);
+        atualizarAltura(y);
+
+        return y;
+    }
+
     public No getRaiz() {
         return raiz;
     }
