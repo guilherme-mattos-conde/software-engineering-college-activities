@@ -27,7 +27,7 @@ public class No {
         int alturaDireita = (noDireita == null) ? 0 : noDireita.getAltura();
         return alturaEsquerda - alturaDireita;
     }
-    
+
     public No getNoDireita() {
         return noDireita;
     }

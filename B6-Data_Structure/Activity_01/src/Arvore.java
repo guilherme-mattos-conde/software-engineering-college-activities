@@ -164,6 +164,33 @@ public class Arvore {
         }
     }
 
+    private int altura(No no) {
+        return no == null ? 0 : no.getAltura();
+    }
+
+    private int fatorBalanceamento(No no) {
+        return no == null ? 0 : altura(no.getNoEsquerda()) - altura(no.getNoDireita());
+    }
+
+    private void atualizarAltura(No no) {
+        if (no != null) {
+            no.setAltura(1 + Math.max(altura(no.getNoEsquerda()), altura(no.getNoDireita())));
+        }
+    }
+
+    public No rotacaoLL(No y) {
+        No x = y.getNoEsquerda();
+        No T2 = x.getNoDireita();
+
+        x.setNoDireita(y);
+        y.setNoEsquerda(T2);
+
+        atualizarAltura(y);
+        atualizarAltura(x);
+
+        return x;
+    }
+
     public No getRaiz() {
         return raiz;
     }
