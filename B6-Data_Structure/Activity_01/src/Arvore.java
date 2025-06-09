@@ -209,6 +209,11 @@ public class Arvore {
         return rotacaoLL(z);
     }
 
+    private No rotacaoRL(No z) {
+        z.setNoDireita(rotacaoLL(z.getNoDireita()));
+        return rotacaoRR(z);
+    }
+
     public No getRaiz() {
         return raiz;
     }
