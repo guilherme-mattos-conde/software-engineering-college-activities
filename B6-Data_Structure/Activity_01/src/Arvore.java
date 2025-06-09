@@ -178,7 +178,7 @@ public class Arvore {
         }
     }
 
-    public No rotacaoLL(No y) {
+    private No rotacaoLL(No y) {
         No x = y.getNoEsquerda();
         No T2 = x.getNoDireita();
 
@@ -202,6 +202,11 @@ public class Arvore {
         atualizarAltura(y);
 
         return y;
+    }
+
+    private No rotacaoLR(No z) {
+        z.setNoEsquerda(rotacaoRR(z.getNoEsquerda()));
+        return rotacaoLL(z);
     }
 
     public No getRaiz() {
