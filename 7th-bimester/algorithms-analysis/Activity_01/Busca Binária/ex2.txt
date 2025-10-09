@@ -1,0 +1,2 @@
+A busca binária não pode ser utilizada em vetores não ordenados pois para encontrar o índice do valor desejado ele quebra o vetor em metades para reduzir o tempo de busca em vetores maiores, que só é possível quando os dados estão ordenados.
+Por isso a busca linear é a única solução possível para realizar buscas em vetores desordenados, e a busca binária é a melhor opção para busca em vetores com grande quantidade de dados ordenados.
